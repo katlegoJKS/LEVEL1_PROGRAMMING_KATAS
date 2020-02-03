@@ -7,7 +7,7 @@ hello("Tshepo!")
 
 
 
-#Exercise: check if a number is even
+#Exercise: check if a number is even or odd
 print("\n\n------TASK 2------")
 
 def even_or_odd(numb):
