@@ -31,3 +31,16 @@ def square(numb):
                 print(n_list[row][col],end=" ")
         print()
 square("#")
+
+
+
+#Exercise: Draw a right handed triangle
+print("\n\n------Task 4------")
+
+def triangle(Numbr): 
+    Numbr = int(input("enter: "))
+    for i in range(1,Numbr+1):
+        for j in range(1,i+1):
+            print("#",end="")
+        print()
+triangle(2)
