@@ -38,7 +38,7 @@ square("#")
 print("\n\n------Task 4------")
 
 def triangle(Numbr): 
-    Numbr = int(input("enter: "))
+    Numbr = int(input("Enter a number: "))
     for i in range(1,Numbr+1):
         for j in range(1,i+1):
             print("#",end="")
@@ -51,7 +51,7 @@ triangle(2)
 print("\n\n------Task 5------")
 
 def isosceles(num):
-    num = int(input("Enter: "))
+    num = int(input("Enter a number: "))
     row = 0
     while row<num:
         space = num-row-1
@@ -65,3 +65,24 @@ def isosceles(num):
         row = row+1
         print()
 isosceles("")
+
+
+
+#Exercise: Find the Longest string
+print("\n\n------Task 6------")
+
+sentence = input("Enter words or a sentence: ")
+
+words = sentence.split()
+
+print(words)
+
+long_word_length = len(words[0])
+
+for i in words:
+    word_length = len(i)
+    if word_length > long_word_length:
+        long_word_length = word_length
+        currentword = i
+
+print(currentword)
