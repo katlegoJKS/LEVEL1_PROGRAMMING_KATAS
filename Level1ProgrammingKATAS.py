@@ -98,3 +98,22 @@ def combine():
     arr = arr1 + arr2
     print(arr)
 combine()
+
+
+
+#Exercise: Frame some text
+print("\n\n------Task 8------")
+
+def frame(num1,num2):
+    for col in range(1,num1+1):
+        print(" ")
+        for row in range(1,num2+1):
+            if(col == 1 or col == num1 or row == 1 or row == num2):
+                print("#",end="  ")
+            else:
+                print("H",end="  ")
+num1 = int(input("Enter a number for columns: "))
+num2 = int(input("Enter a number for rows: "))
+msg = "Write\ngood\ncode\nevery\nday."
+l = len(msg)
+frame(num1,num2)
