@@ -75,7 +75,7 @@ sentence = input("Enter words or a sentence: ")
 
 words = sentence.split()
 
-print(words)
+print(words,"\n")
 
 long_word_length = len(words[0])
 
@@ -86,3 +86,15 @@ for i in words:
         currentword = i
 
 print(currentword)
+
+
+
+#Exercise: Combine two lists/arrays
+print("\n\n------Task 7------")
+
+def combine():
+    arr1 = [1,10,100,1000]
+    arr2 = [2,20,200,2000]
+    arr = arr1 + arr2
+    print(arr)
+combine()
