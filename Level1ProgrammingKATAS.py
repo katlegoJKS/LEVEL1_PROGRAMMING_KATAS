@@ -71,20 +71,20 @@ isosceles("")
 #Exercise: Find the Longest string
 print("\n\n------Task 6------")
 
-sentence = input("Enter words or a sentence: ")
-words = sentence.split()
-
-print(words,"\n")
-
-long_word_length = len(words[0])
-
-for i in words:
-    word_length = len(i)
-    if word_length > long_word_length:
-        long_word_length = word_length
-        currentword = i
-
-print(currentword)
+def longestStr(word):
+    print("The longest word(s) is: ")
+    words = list(word.split(" "))
+    length = [ ]
+    for i in words:
+        length.append(len(i))
+    maximum = max(length)
+    returnlist = []
+    for j in words:
+        if len(j) == maximum:
+            returnlist.append(j)
+            list_word = j
+            print(list_word)
+longestStr(input("Enter a sentence or series of words: "))
 
 
 
@@ -108,7 +108,7 @@ combine("")
 #Exercise: Frame some text
 print("\n\n------Task 8------")
 
-p=input("Enter the words " + "'Write Good Code Every Day': ")
+p=input("Enter the sentence " + "'Write Good Code Every Day': ")
 def frame(words):
     size = len(max(words, key=len))
     print('*' * (size + 4))
