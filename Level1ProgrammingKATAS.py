@@ -72,7 +72,6 @@ isosceles("")
 print("\n\n------Task 6------")
 
 sentence = input("Enter words or a sentence: ")
-
 words = sentence.split()
 
 print(words,"\n")
