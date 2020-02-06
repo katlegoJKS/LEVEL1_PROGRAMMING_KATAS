@@ -92,28 +92,28 @@ print(currentword)
 #Exercise: Combine two lists/arrays
 print("\n\n------Task 7------")
 
-def combine():
-    arr1 = [1,10,100,1000]
-    arr2 = [2,20,200,2000]
-    arr = arr1 + arr2
-    print(arr)
-combine()
+arr1 = [1,10,100,1000]
+arr2 = [2,20,200,2000]
+
+n = len(arr1)
+l = [ ]
+def combine(arr):
+    for i in range(n):
+        l.append(arr1[i])
+        l.append(arr2[i])
+    print(l)
+combine("")
 
 
 
 #Exercise: Frame some text
 print("\n\n------Task 8------")
 
-def frame(num1,num2):
-    for col in range(1,num1+1):
-        print(" ")
-        for row in range(1,num2+1):
-            if(col == 1 or col == num1 or row == 1 or row == num2):
-                print("#",end="  ")
-            else:
-                print("H",end="  ")
-num1 = int(input("Enter a number for columns: "))
-num2 = int(input("Enter a number for rows: "))
-msg = "Write\ngood\ncode\nevery\nday."
-l = len(msg)
-frame(num1,num2)
+p=input("Enter the words " + "'Write Good Code Every Day': ")
+def frame(words):
+    size = len(max(words, key=len))
+    print('*' * (size + 4))
+    for word in words:
+        print('* {a:<{b}} *'.format(a=word, b=size))
+    print('*' * (size + 4))
+frame(p.split(" "))
