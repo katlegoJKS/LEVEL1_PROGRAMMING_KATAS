@@ -76,16 +76,16 @@ def longestStr(word):
     print("The longest word(s) is: ")
     words = list(word.split(" "))
     length = [ ]
-    for i in words:
-        length.append(len(i))
+    for each_letter in words:
+        length.append(len(each_letter))
     maximum = max(length)
     returnlist = []
-    for j in words:
-        if len(j) == maximum:
-            returnlist.append(j)
-            list_word = j
+    for each_word in words:
+        if len(each_word) == maximum:
+            returnlist.append(each_word)
+            list_word = each_word
             print(list_word)
-longestStr("This is the longest string in this MF")
+longestStr("once upon a time")
 
 
 
