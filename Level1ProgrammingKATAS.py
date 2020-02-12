@@ -3,6 +3,7 @@ print("------TASK 1------")
 
 def hello(name):
     print("Hello " + name)
+
 hello("Tshepo!")
 
 
@@ -10,27 +11,27 @@ hello("Tshepo!")
 #Exercise: check if a number is even or odd
 print("\n\n------TASK 2------")
 
-def even_or_odd(numb):
-    numb = int(input("Enter a number : "))
-    if(numb%2==0):
+def even_or_odd(number):
+    if(number%2==0):
         print("even")
     else:
         print("odd")
-even_or_odd("numb")
+
+even_or_odd(3)
 
 
 
 #Exercise: Draw a square
 print("\n\n------Task 3------")
 
-def square(numb):
-    numb = int(input("Enter a number: "))
-    n_list = [["#" for x in range(numb)] for y in range(numb)]
-    for row in range(0,numb):
-        for col in range(0,numb):
+def square(numbers):
+    n_list = [["#" for height in range(numbers)] for width in range(numbers)]
+    for row in range(0,numbers):
+        for col in range(0,numbers):
                 print(n_list[row][col],end=" ")
         print()
-square("#")
+
+square(2)
 
 
 
@@ -38,11 +39,11 @@ square("#")
 print("\n\n------Task 4------")
 
 def triangle(Numbr): 
-    Numbr = int(input("Enter a number: "))
-    for i in range(1,Numbr+1):
-        for j in range(1,i+1):
+    for side1 in range(1,Numbr+1):
+        for side2 in range(1,side1+1):
             print("#",end="")
         print()
+
 triangle(2)
 
 
@@ -50,11 +51,11 @@ triangle(2)
 #Exercise: Draw an iscosceles triangle
 print("\n\n------Task 5------")
 
-def isosceles(num):
-    num = int(input("Enter a number: "))
+def isosceles(integer):
+    integer = 4
     row = 0
-    while row<num:
-        space = num-row-1
+    while row<integer:
+        space = integer-row-1
         while space>0:
             print(end=" ")
             space = space-1
@@ -84,23 +85,23 @@ def longestStr(word):
             returnlist.append(j)
             list_word = j
             print(list_word)
-longestStr(input("Enter a sentence or series of words: "))
+longestStr("This is the longest string in this MF")
 
 
 
 #Exercise: Combine two lists/arrays
 print("\n\n------Task 7------")
 
-arr1 = [1,10,100,1000]
-arr2 = [2,20,200,2000]
+array1 = [1,10,100,1000]
+array2 = [2,20,200,2000]
 
-n = len(arr1)
-l = [ ]
-def combine(arr):
-    for i in range(n):
-        l.append(arr1[i])
-        l.append(arr2[i])
-    print(l)
+number_of = len(array1)
+array0 = [ ]
+def combine(array):
+    for element in range(number_of):
+        array0.append(array1[element])
+        array0.append(array2[element])
+    print(array0)
 combine("")
 
 
@@ -108,11 +109,11 @@ combine("")
 #Exercise: Frame some text
 print("\n\n------Task 8------")
 
-p=input("Enter the sentence " + "'Write Good Code Every Day': ")
+phrase = "Write Good Code Every Day"
 def frame(words):
     size = len(max(words, key=len))
     print('*' * (size + 4))
     for word in words:
         print('* {a:<{b}} *'.format(a=word, b=size))
     print('*' * (size + 4))
-frame(p.split(" "))
+frame(phrase.split(" "))
