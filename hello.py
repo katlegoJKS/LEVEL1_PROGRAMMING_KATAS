@@ -1,5 +1,5 @@
 def hello(name):
-    greetings = f"Hello {name}"
+    greetings = "Hello {}".format(name)
     return greetings
 
 name = hello("Tshepo!")
